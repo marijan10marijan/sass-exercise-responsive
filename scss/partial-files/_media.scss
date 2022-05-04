@@ -1,0 +1,34 @@
+@use 'main';
+
+@media (max-width:57.5rem) {
+    .grid__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &-two {
+            width: 100%;
+            padding: 4rem 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+@media (max-width:36.25rem) {
+    .flex__container {
+        flex-wrap: wrap;
+    }
+
+    .grid__container {
+        &-two {
+            .title-two {
+                text-align: center;
+            }
+
+            p {
+                margin: auto;
+                width: 85%;
+            }
+        }
+    }
+}

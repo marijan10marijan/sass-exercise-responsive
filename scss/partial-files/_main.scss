@@ -1,0 +1,72 @@
+@use 'variables'as *;
+@use 'base-style';
+
+.grid__container {
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr, 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas:
+        'one two'
+        'three two';
+    gap: 1rem;
+
+    &-one {
+        grid-area: one;
+        padding: 4rem 2.5rem;
+        background-color: $clr-background-one;
+
+        .title {
+            color: $clr-primary;
+            font-size: 1.8rem;
+            padding-bottom: .8rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: $clr-text-two;
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    .flex__container {
+        display: flex;
+        gap: .8rem;
+        color: white;
+
+        &-all {
+            border: 1px solid #333;
+            background-color: $clr-primary;
+            padding: 1rem;
+        }
+    }
+
+    &-two {
+        grid-area: two;
+        padding: 4rem 0 4rem 2rem;
+        background-color: $clr-background-two;
+        color: $clr-text-one;
+
+        .title-two {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            width: 70%;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-three {
+        grid-area: three;
+        color: $clr-text-two;
+        padding: 0rem 2.5rem 2rem 2.5rem;
+    }
+}

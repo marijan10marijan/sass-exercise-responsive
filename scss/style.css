@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid__container {
+  max-width: 1300px;
+  width: 95%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr, 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas: "one two" "three two";
+  gap: 1rem;
+}
+.grid__container-one {
+  grid-area: one;
+  padding: 4rem 2.5rem;
+  background-color: #fff;
+}
+.grid__container-one .title {
+  color: rgb(55, 118, 236);
+  font-size: 1.8rem;
+  padding-bottom: 0.8rem;
+  font-weight: 700;
+}
+.grid__container-one .subtitle {
+  color: #333;
+  padding-bottom: 2.5rem;
+}
+.grid__container .flex__container {
+  display: flex;
+  gap: 0.8rem;
+  color: white;
+}
+.grid__container .flex__container-all {
+  border: 1px solid #333;
+  background-color: rgb(55, 118, 236);
+  padding: 1rem;
+}
+.grid__container-two {
+  grid-area: two;
+  padding: 4rem 0 4rem 2rem;
+  background-color: #222;
+  color: #fff;
+}
+.grid__container-two .title-two {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+.grid__container-two p {
+  width: 70%;
+}
+.grid__container-two p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.grid__container-three {
+  grid-area: three;
+  color: #333;
+  padding: 0rem 2.5rem 2rem 2.5rem;
+}
+
+@media (max-width: 57.5rem) {
+  .grid__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .grid__container-two {
+    width: 100%;
+    padding: 4rem 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+@media (max-width: 36.25rem) {
+  .flex__container {
+    flex-wrap: wrap;
+  }
+
+  .grid__container-two .title-two {
+    text-align: center;
+  }
+  .grid__container-two p {
+    margin: auto;
+    width: 85%;
+  }
+}/*# sourceMappingURL=style.css.map */
